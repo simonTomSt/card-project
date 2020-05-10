@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"card.js":[function(require,module,exports) {
+})({"CheckCardNumber.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -313,16 +313,16 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _card = require("./card");
+var _CheckCardNumber = require("./CheckCardNumber");
 
 require("./styles/main.scss");
 
 var form = document.querySelector('form');
-var checkCardNumber = new _card.CheckCardNumber();
+var checkCardNumber = new _CheckCardNumber.CheckCardNumber();
 form.addEventListener('submit', function (e) {
   return checkCardNumber.showInfo(e);
 });
-},{"./card":"card.js","./styles/main.scss":"styles/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./CheckCardNumber":"CheckCardNumber.js","./styles/main.scss":"styles/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -350,7 +350,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57699" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57878" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
