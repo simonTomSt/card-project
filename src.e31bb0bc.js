@@ -168,8 +168,11 @@ var CheckCardNumber = /*#__PURE__*/function () {
     key: "validator",
     value: function validator() {
       var isNumber = /^\d+$/.test(this.cardNumber.value);
+      var isLetter = /[a-z]/gi.test(this.cardNumber.value);
 
-      if (this.cardNumber.value.length < 13) {
+      if (isLetter) {
+        alert('Niepoprawny numer');
+      } else if (this.cardNumber.value.length < 13) {
         return alert('Wprowadzony numer jest za krótki');
       } else if (this.cardNumber.value.length > 16) {
         return alert('Wprowadzony numer jest za długi');
@@ -347,7 +350,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57124" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57699" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
