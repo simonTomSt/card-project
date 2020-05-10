@@ -1,0 +1,52 @@
+@import "./variables.scss";
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    @include autoPosition;
+    margin-top:60px;
+    h1{
+        font-size: $largeSize;
+        margin-bottom:30px;
+        text-align: center;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width:80%;
+        margin: $centerPos
+    }
+    label{
+       font-size: $normalSize;
+       padding: 0 15px 0 0;
+       margin-bottom:10px;
+    }
+    input{
+        font-size: $smallSize;
+        padding:10px;
+    }
+    button{
+        width:30%;
+        margin: $centerPos;
+        padding :10px 15px;
+        margin-top:20px;
+        background-color: rgb(34, 132, 150);
+        color:white;
+        font-size: $normalSize;
+        border:none;
+        cursor : pointer;
+        transition:0.4s;
+    }
+    button:hover{
+        background-color: rgb(10, 65, 75);
+    }
+    h2{
+        margin-top:30px;
+        text-align: center;
+    }
+}
+
+

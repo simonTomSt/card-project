@@ -1,0 +1,9 @@
+$largeSize: 70px;
+$normalSize: 30px;
+$smallSize: 20px;
+$centerPos : 0 auto;
+@mixin autoPosition {
+    margin: $centerPos;
+   max-width:960px;
+   width:100%;
+  }
